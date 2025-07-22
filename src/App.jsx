@@ -1,12 +1,15 @@
 
 import React from 'react'
-import Task from './components/Task'
+
+import Task2 from './components/Task2'
 
 
 export default function App() {
   return (
     <div>
-      <Task/>
+     
+      <Task2/>
+
     </div>
   )
 }
