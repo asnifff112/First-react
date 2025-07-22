@@ -2,11 +2,50 @@ html, body, #root{
   margin: 0;
   padding: 0;
   height: 100%;
+  background: linear-gradient(#4D3F29,#C49A6C,#FFF3D1) ;
 }
 
-.dd{
-  margin: 0;
-  padding: 0;
-  height: 100%;
+.container0{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+   min-height: 350px;
+  padding-top: 50px;
+  color:#402E2A;
+  font-style:inherit;
+  
+  
+ 
+}
+.navbar0{
+  
+  height: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  
+}
+.form-control{
+  
+  background-color:#4D3F29;
+  border:none ;
+  outline: none;
+  border-radius: 30px;
+  border-width: -10px;
+  border-color: #4D3F29;
+  width: 200px;
+  height: 30px;
+  padding-right: 3px;
+  margin-left: 60px;
+ 
+}
+.btn{
+  color: #FFF3D1;
+  background-color:#4D3F29;
+  border: #FFF3D1;
+  border-radius: 20px;
+  margin-left: 5px;
+  height: 30px;
+  
 }
 

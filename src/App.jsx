@@ -1,14 +1,19 @@
 
 import React from 'react'
+import "./App.css";
 
-import Task2 from './components/Task2'
+
+
+import TodoApp from './components/Todos'
 
 
 export default function App() {
   return (
     <div>
      
-      <Task2/>
+      
+      <TodoApp/>
+
 
     </div>
   )

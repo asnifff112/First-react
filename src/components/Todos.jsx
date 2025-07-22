@@ -1,19 +1,61 @@
 
 
- let Todos = () =>{
-    let name = "asiiii";
-    let getDay = (date) => {
-        return Intl.DateTimeFormat('in-US', {weekday:'long'}).format(date)
-    }
-    return (
-        <div>
-            <h1 style={{backgroundColor: "red",color:"black"}}> {name} Todos ({getDay(new Date)}) </h1>
-            <ul>
-                <li>helloooooooooiiiiiiiiii</li>
-                <li>how are uhhhhhhhhhhhh</li>
-            </ul>
-        </div>
-    );
-} 
+import React, { useState } from "react";
 
-export default Todos ;
+function TodoApp() {
+  const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
+
+  const handleAdd = () => {
+    if (task.trim() !== "") {
+      setTasks([...tasks, task]);
+      setTask("");
+    }
+  };
+
+  const handleDelete = (index) => {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+  };
+
+  return (
+    <div className="container0">
+     
+      <nav className="navbar0">
+        <div className="container">
+          <span className="navbar"> Todo App</span>
+        </div>
+      </nav>
+
+   
+      <div className="input">
+        <input
+          type="text"
+          className="form-control"
+          placeholder  ="  Enjoy..."
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+        />
+        <button className="btn" onClick={handleAdd}>
+          Add Task
+        </button>
+      </div>
+
+     
+      <ul className="list-group">
+        {tasks.map((t, index) => (
+          <li key={index} className="list">
+            {t}
+            <button className="btn btn" onClick={() => handleDelete(index)}>
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoApp;
+
+
